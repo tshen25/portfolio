@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tony Shen Portfolio</title>
+    
+    <!-- ✅ Add this Tailwind CDN line -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">Tony's Portfolio.</div>
+    </nav>
+    <div class="hero-content">
+        <div class="hero-text">
+          <h1><span class="auto-type"></span></h1>
+          <p class="subtitle">Data Professional & Developer | Currently exploring full-time positions</p>
+          <p class="blurb">
+            Welcome to my page! I'm passionate about turning data into meaningful insights and building intuitive, accessible web experiences.
+          </p>
+        </div>
+      </div>
+  </header>
+  
+  <section class="gallery">
+    <div class="gallery-header">
+        <h2>My Projects</h2>
+        <div class="filters">
+          <span class="filter active" data-category="all">All</span>
+          <span class="filter" data-category="web">Web</span>
+          <span class="filter" data-category="data">Data</span>
+          <span class="filter" data-category="design">Design</span>
+        </div>
+    </div>
+      
+    <div class="gallery-grid">
+      <!-- Web category -->
+      <div class="gallery-item" data-category="web">
+        <img src="photos/img1.png" alt="Project 1" />
+      </div>
+      <div class="gallery-item" data-category="web">
+        <img src="photos/img2.png" alt="Project 2" />
+      </div>
+      <div class="gallery-item" data-category="web">
+        <img src="photos/img3.png" alt="Project 3" />
+      </div>
+      <div class="gallery-item" data-category="web">
+        <img src="photos/img4.png" alt="Project 4" />
+      </div>
+      
+      <!-- Data category -->
+      <div class="gallery-item" data-category="data">
+        <img src="photos/img5.png" alt="Project 5" />
+      </div>
+      <div class="gallery-item" data-category="data">
+        <img src="photos/img6.png" alt="Project 6" />
+      </div>
+      <div class="gallery-item" data-category="data">
+        <img src="photos/img7.png" alt="Project 7" />
+      </div>
+      
+      <!-- Design category -->
+      <div class="gallery-item" data-category="design">
+        <img src="photos/img8.png" alt="Project 8" />
+      </div>
+      <div class="gallery-item" data-category="design">
+        <img src="photos/img9.png" alt="Project 9" />
+      </div>
+      <div class="gallery-item" data-category="design">
+        <img src="photos/img10.png" alt="Project 10" />
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-16 text-center px-4">
+    <h2 class="text-3xl font-semibold mb-2">Primary Experience</h2>
+    <p class="text-gray-600 max-w-xl mx-auto mb-8">
+      Here are a few of the organizations I've had the privilege of working with over the years.
+    </p>
+  
+    <div class="flex flex-wrap justify-center items-center gap-6">
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="photos/logo1.png" alt="Org 1" class="h-16 object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="photos/logo2.svg" alt="Org 2" class="h-16 object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="photos/logo3.svg" alt="Org 3" class="h-16 object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="photos/logo4.svg" alt="Org 4" class="h-16 object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="photos/logo5.png" alt="Org 5" class="h-16 object-contain" />
+      </div>
+      <div class="h-16 w-32 flex items-center justify-center">
+        <img src="photos/logo6.png" alt="Org 6" class="h-16 object-contain" />
+      </div>
+  </section>
+
+  <section class="mt-16 text-center px-4">
+    <h2 class="text-3xl font-semibold mb-2">My Expertise</h2>
+    <p class="text-gray-600 max-w-xl mx-auto mb-8">
+      Here are a few of the organizations I've had the privilege of working with over the years.
+    </p>
+  </section>
+  
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed(".auto-type", {
+      strings: ["Hey, it's Tony Shen 👋"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      showCursor: true,
+      loop: false,
+      backDelay: 0,
+      onComplete: function () {
+        // Wait 2 seconds, then fade out the cursor
+        setTimeout(() => {
+          const cursor = document.querySelector('.typed-cursor');
+          if (cursor) cursor.style.opacity = 0;
+        }, 1590); // delay before fade
+      }
+    });
+  </script>
+  
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+/* Reset and font setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    background-color: #fdf6e3;
+  }
+  
+  /* Hero section */
+  .hero {
+    padding: 6rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hero-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 4rem;
+  }
+  
+  .hero-text {
+    max-width: 80%;
+    padding-left: clamp(1rem, 10vw, 20rem);
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .blurb {
+    font-size: 0.86rem;
+    max-width: 80%;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* Top nav */
+  .nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    padding-left: clamp(1rem, 10vw, 20rem);
+    padding-top: 0.5rem;
+  }
+  
+  /* Gallery filters */
+  .gallery-header {
+    padding: 0 clamp(1rem, 10vw, 20rem);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .gallery-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+  
+  .filter {
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #444;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .filter:hover,
+  .filter.active {
+    background-color: #ddd;
+    color: #000;
+  }
+  
+  /* Improved gallery with grid and transitions */
+  .gallery {
+    padding: 0.5rem 0.5rem;
+    background-color: #fdf6e3;
+    overflow: hidden;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 500px; /* Ensure consistent height during filtering */
+  }
+  
+  .gallery-item {
+    display: block;
+    position: absolute; /* Position absolutely for animations */
+    width: calc(33.333% - 1rem); /* Approximate width for 3 columns */
+    transition: all 0.6s cubic-bezier(0.43, 0.195, 0.02, 1); /* More pronounced easing */
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+    backface-visibility: hidden; /* Performance optimization */
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+  
+  .gallery-item.hide {
+    opacity: 0;
+    transform: scale(0.8) translateY(50px); /* Move down while fading out */
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Ensure responsive layout with absolute positioning */
+  @media (max-width: 900px) {
+    .gallery-item {
+      width: calc(50% - 1rem); /* 2 columns */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .gallery-item {
+      width: calc(100% - 1rem); /* 1 column */
+    }
+  }
+  
+  /* Responsive grid adjustments */
+  @media (max-width: 900px) {
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .typed-cursor {
+    transition: opacity 0.4s ease;
+  }
+  
