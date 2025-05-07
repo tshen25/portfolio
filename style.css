@@ -160,6 +160,116 @@
     pointer-events: none;
     z-index: -1;
   }
+
+  /* ----------------------------------services--------------------------*/
+#services{
+  padding: 30px 0;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* was 250px */
+  grid-gap: 48px; /* slightly increased from 40px */
+  margin-top: 50px;
+  padding: 0 1rem; /* Add side padding if needed */
+}
+
+.services-list div{
+  background: #feb144fa;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+  color: #fff;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div p{
+  color: #fff;
+}
+.services-list div a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover{
+  background-color: #ffcc00;
+  transform: translateY(-10px);
+}
+
+/* ------------------- contact -------------------*/
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+}
+.contact-left p{
+  margin-top: 30px;
+}
+.contact-left p i{
+  color: #ababab;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icons{
+  margin-top: 30px;
+}
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+
+}
+.social-icons a:hover{
+  transform: translateY(-5px);
+}
+.btn.btn2{
+  display: inline-block;
+  background-color: #fff;
+}
+.contact-right form{
+  width: 100%;
+}
+form input, form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+
+}
+form .btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background-color: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
   
   /* Ensure responsive layout with absolute positioning */
   @media (max-width: 900px) {

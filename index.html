@@ -10,12 +10,13 @@
     
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b4f3030e31.js" crossorigin="anonymous"></script>
   </head>
   
 <body>
   <header class="hero">
     <nav class="nav">
-      <div class="logo">Tony's Portfolio.</div>
+      <a href="https://tshen25.github.io/portfolio/" class="logo cursor-pointer hover:underline ">Tony's Portfolio.</a>
     </nav>
     <div class="hero-content">
         <div class="hero-text">
@@ -78,7 +79,7 @@
     </div>
   </section>
 
-  <section class="mt-16 text-center px-4">
+  <section class="mt-24 mb-20 text-center px-4">
     <h2 class="text-3xl font-semibold mb-2">Primary Experience</h2>
     <p class="text-gray-600 max-w-xl mx-auto mb-8">
       Here are a few of the organizations I've had the privilege of working with over the years.
@@ -103,14 +104,111 @@
       <div class="h-16 w-32 flex items-center justify-center">
         <img src="photos/logo6.png" alt="Org 6" class="h-16 object-contain" />
       </div>
+
+      <div class="mt-2 px-4 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+          
+          <!-- Skills -->
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Skills</h3>
+            <ul class="text-gray-600 list-disc list-inside">
+              <li>Python, R, SQL</li>
+              <li>JavaScript, HTML/CSS</li>
+              <li>Data Visualization (Tableau/PowerBI, ggplot2, D3.js)</li>
+              <li>Quantitative Research</li>
+              <li>Survey Methodology (Qualtrics)/li>
+            </ul>
+          </div>
+      
+          <!-- Experience -->
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Experience</h3>
+            <ul class="text-gray-600 list-disc list-inside">
+              <li>Data Analyst – US HUD 🏙️</li>
+              <li>Research & Technology Analyst – TCC 🗳️</li>
+              <li>Government Relations Intern - ETA 💳</li>
+              <li>Data Fellow & Teaching Assistant - UMD BSOS 🐢</li>
+              <li>Correspondence Intern - White House 🏛️</li>
+
+            </ul>
+          </div>
+      
+          <!-- Education -->
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Education</h3>
+            <ul class="text-gray-600 list-disc list-inside">
+              <li>B.S. in PoliSci – UMD 🐢</li>
+              <li>M.S. in DataSci - GaTech 🐝</li>
+            </ul>
+          </div>
+      
+        </div>
+      </div>
+      
   </section>
 
-  <section class="mt-16 text-center px-4">
-    <h2 class="text-3xl font-semibold mb-2">My Expertise</h2>
-    <p class="text-gray-600 max-w-xl mx-auto mb-8">
-      Here are a few of the organizations I've had the privilege of working with over the years.
-    </p>
+  <section class="mt-40 mb-20 text-center px-4">
+    <h2 class="text-3xl font-semibold mb-2">My Services</h2>
+    <div class="max-w-6xl mx-auto"> <!-- Add this wrapper -->
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-database"></i>
+          <h2>Data Analysis</h2>
+          <p>Prospero enacts a sophisticated plan to take revenge on his usurpers and regain his dukedom.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-map-location-dot"></i>
+          <h2>GIS</h2>
+          <p>Prospero enacts a sophisticated plan to take revenge on his usurpers and regain his dukedom.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-chart-line"></i>
+          <h2>Business Intelligence</h2>
+          <p>Prospero enacts a sophisticated plan to take revenge on his usurpers and regain his dukedom.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!---------------------------------------- contact ----------------->
+  <footer class="bg-gray-900 text-white px-6 py-12 mt-40">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+      <!-- Contact Info & Socials -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Get In Touch</h2>
+        <p class="mb-2 flex items-center"><i class="fa-solid fa-paper-plane mr-2"></i> tonyshen311@gmail.com</p>
+        <div class="flex gap-4 mt-4 text-2xl">
+          <a href="https://github.com/tshen25" class="text-white hover:text-gray-400">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tony-shen311/" class="text-white hover:text-gray-400">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Quick Links (optional) -->
+      <div class="text-right justify-self-end">
+        <h2 class="text-2xl font-semibold mb-4">Quick Links</h2>
+        <ul class="space-y-2">
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#projects" class="hover:underline">Projects</a></li>
+          <li><a href="#services" class="hover:underline">Services</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="text-center mt-12 text-sm text-gray-400">
+      <p>&copy; 2025 Tony Shen. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  
   
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script>
