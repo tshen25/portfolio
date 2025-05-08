@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b4f3030e31.js" crossorigin="anonymous"></script>
+    <!-- Hamburger Menu Button -->
+    <button id="menu-toggle" class="fixed top-10 right-12 z-50 text-orange-300 text-3xl focus:outline-none">
+    <i class="fa-solid fa-bars"></i>
+    </button>
+
   </head>
   
 <body>
@@ -172,6 +177,21 @@
       </div>
     </div>
   </section>
+
+  <!-- Sidebar Overlay -->
+  <div id="sidebar" class="fixed top-0 right-0 h-full w-64 bg-gray-900 text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg p-6">
+    <div class="p-6">
+      <h2 class="text-2xl font-bold mb-6">Menu</h2>
+      <ul class="space-y-4">
+        <li><a href="#about" class="hover:text-gray-300">About</a></li>
+        <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
+        <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+        <li><a href="/subpage.html" class="hover:text-gray-300">Subpage</a></li>
+      </ul>
+    </div>
+  </div>
+  
+
 
   <!---------------------------------------- contact ----------------->
   <footer class="bg-gray-900 text-white px-6 py-12 mt-40">

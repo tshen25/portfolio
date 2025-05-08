@@ -93,3 +93,18 @@ document.addEventListener('DOMContentLoaded', function() {
       resizeTimer = setTimeout(arrangeItems, 250);
     });
   });
+
+
+  const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+  
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('translate-x-full');
+    });
+  
+    // Optional: close sidebar on click outside
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
+        sidebar.classList.add('translate-x-full');
+      }
+    });
