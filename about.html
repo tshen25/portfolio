@@ -17,6 +17,30 @@
   <div class="p-8">
     <h1 class="text-4xl font-bold mb-4">About Me</h1>
     <p>This is where you’ll write your about me section.</p>
+    <section id="timeline" class="relative max-w-4xl mx-auto mt-20">
+      <!-- Vertical line -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-300 z-0" id="timeline-line"></div>
+
+      <!-- Timeline items -->
+      <div class="space-y-24 relative z-10">
+        <div class="timeline-item opacity-0 translate-y-10 transition duration-700">
+          <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500 w-full max-w-xl mx-auto">
+            <h3 class="text-xl font-bold">2020 – Started My Career</h3>
+            <p class="text-gray-600">I began my journey into tech as a software intern...</p>
+          </div>
+        </div>
+
+        <div class="timeline-item opacity-0 translate-y-10 transition duration-700">
+          <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-green-500 w-full max-w-xl mx-auto">
+            <h3 class="text-xl font-bold">2022 – Joined XYZ Company</h3>
+            <p class="text-gray-600">At XYZ, I contributed to several high-impact projects...</p>
+          </div>
+        </div>
+
+        <!-- Add more items like this -->
+      </div>
+    </section>
+
   </div>
 
   <footer class="bg-gray-900 text-white px-6 py-12 mt-40">
@@ -50,5 +74,9 @@
       <p>&copy; 2025 Tony Shen. All rights reserved.</p>
     </div>
   </footer>
+
+<link rel="stylesheet" href="./style.css" />
+<script src="./script.js" defer></script>
+
 </body>
 </html>

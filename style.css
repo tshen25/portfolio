@@ -299,4 +299,10 @@ form .btn2{
   .typed-cursor {
     transition: opacity 0.4s ease;
   }
-  
+
+/* Optional additional styling */
+#timeline-line {
+  top: 0;
+  bottom: 0;
+  transition: height 0.3s ease;
+}
