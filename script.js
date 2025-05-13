@@ -108,3 +108,43 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.add('translate-x-full');
       }
     });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".timeline-item");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("opacity-0", "translate-y-10");
+          entry.target.classList.add("opacity-100", "translate-y-0");
+        } else {
+          entry.target.classList.remove("opacity-100", "translate-y-0");
+          entry.target.classList.add("opacity-0", "translate-y-10");
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  items.forEach(item => {
+    observer.observe(item);
+  });
+
+  // Optional: Dynamic line filler as you scroll
+  const line = document.getElementById("timeline-line");
+  window.addEventListener("scroll", () => {
+    const section = document.getElementById("timeline");
+    const top = section.getBoundingClientRect().top;
+    const height = section.offsetHeight;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight && top + height > 0) {
+      const percent =
+        Math.min(1, Math.max(0, (windowHeight - top) / (height + windowHeight)));
+      line.style.height = `${percent * 100}%`;
+    }
+  });
+});
