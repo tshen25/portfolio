@@ -300,9 +300,61 @@ form .btn2{
     transition: opacity 0.4s ease;
   }
 
-/* Optional additional styling */
-#timeline-line {
-  top: 0;
-  bottom: 0;
-  transition: height 0.3s ease;
+/* Timeline styling */
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  transition: all 0.7s ease;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 3px solid #3b82f6; /* Blue border */
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+/* Alternate timeline items left and right */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+  margin-right: 4rem;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: auto;
+  margin-left: 4rem;
+}
+
+/* Timeline content box */
+.timeline-content {
+  width: 100%;
+  max-width: 24rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Make sure timeline is visible on all devices */
+@media (max-width: 768px) {
+  .timeline-item::before {
+    left: 0;
+  }
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 2rem;
+    margin-right: auto;
+    max-width: calc(100% - 2.5rem);
+  }
+  #timeline-line {
+    left: 10px !important;
+    transform: none !important;
+  }
 }

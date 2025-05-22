@@ -7,40 +7,122 @@
   <link rel="stylesheet" href="./style.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b4f3030e31.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-white text-gray-800">
   <nav class="nav">
     <a href="index.html" class="logo cursor-pointer hover:underline ">Tony's Portfolio.</a>
   </nav>
-  <div class="p-8">
+  
+  <!-- Hamburger Menu Button -->
+  <button id="menu-toggle" class="fixed top-10 right-12 z-50 text-orange-300 text-3xl focus:outline-none">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  
+  <!-- Sidebar Overlay -->
+  <div id="sidebar" class="fixed top-0 right-0 h-full w-64 bg-gray-900 text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg p-6">
+    <div class="p-6">
+      <h2 class="text-2xl font-bold mb-6">Menu</h2>
+      <ul class="space-y-4">
+        <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-8 max-w-6xl mx-auto">
     <h1 class="text-4xl font-bold mb-4">About Me</h1>
-    <p>This is where you’ll write your about me section.</p>
+    <p class="mb-12 text-lg text-gray-600">
+      I'm Tony Shen, a data professional and developer with expertise in data analysis, visualization, and web development. 
+      With a background in political science and data science, I bring a unique perspective to problem-solving and creating 
+      data-driven solutions.
+    </p>
+    
     <section id="timeline" class="relative max-w-4xl mx-auto mt-20">
+      <!-- Title -->
+      <h2 class="text-3xl font-bold mb-10 text-center">My Journey</h2>
+      
       <!-- Vertical line -->
       <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-300 z-0" id="timeline-line"></div>
 
       <!-- Timeline items -->
       <div class="space-y-24 relative z-10">
         <div class="timeline-item opacity-0 translate-y-10 transition duration-700">
-          <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500 w-full max-w-xl mx-auto">
+          <div class="timeline-content bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500">
             <h3 class="text-xl font-bold">2020 – Started My Career</h3>
-            <p class="text-gray-600">I began my journey into tech as a software intern...</p>
+            <p class="text-gray-600">I began my journey into tech as a software intern at a local startup, where I developed my foundational skills in data analysis and programming.</p>
           </div>
         </div>
 
         <div class="timeline-item opacity-0 translate-y-10 transition duration-700">
-          <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-green-500 w-full max-w-xl mx-auto">
-            <h3 class="text-xl font-bold">2022 – Joined XYZ Company</h3>
-            <p class="text-gray-600">At XYZ, I contributed to several high-impact projects...</p>
+          <div class="timeline-content bg-white shadow-lg rounded-lg p-6 border-l-4 border-green-500">
+            <h3 class="text-xl font-bold">2022 – Joined US HUD</h3>
+            <p class="text-gray-600">As a Data Analyst at the US Department of Housing and Urban Development, I worked on significant projects analyzing housing data and creating actionable insights for policy decisions.</p>
           </div>
         </div>
 
-        <!-- Add more items like this -->
+        <div class="timeline-item opacity-0 translate-y-10 transition duration-700">
+          <div class="timeline-content bg-white shadow-lg rounded-lg p-6 border-l-4 border-purple-500">
+            <h3 class="text-xl font-bold">2023 – Completed Master's Degree</h3>
+            <p class="text-gray-600">Graduated with an M.S. in Data Science from Georgia Tech, specializing in machine learning and predictive analytics.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item opacity-0 translate-y-10 transition duration-700">
+          <div class="timeline-content bg-white shadow-lg rounded-lg p-6 border-l-4 border-yellow-500">
+            <h3 class="text-xl font-bold">2024 – Expanded into Full-Stack Development</h3>
+            <p class="text-gray-600">Broadened my skill set to include full-stack web development, creating data-driven web applications that transform complex information into accessible insights.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item opacity-0 translate-y-10 transition duration-700">
+          <div class="timeline-content bg-white shadow-lg rounded-lg p-6 border-l-4 border-red-500">
+            <h3 class="text-xl font-bold">2025 – Present</h3>
+            <p class="text-gray-600">Currently exploring new opportunities where I can leverage my combined expertise in data science and web development to create impactful solutions.</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <section class="mt-32">
+      <h2 class="text-3xl font-bold mb-8 text-center">Skills & Expertise</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-4">Data Analysis</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>• Statistical Analysis</li>
+            <li>• Python & R</li>
+            <li>• Data Visualization</li>
+            <li>• SQL & Database Management</li>
+            <li>• Machine Learning Fundamentals</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>• JavaScript/HTML/CSS</li>
+            <li>• Responsive Design</li>
+            <li>• Frontend Frameworks</li>
+            <li>• API Integration</li>
+            <li>• Interactive Dashboards</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-4">Research & Strategy</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>• Quantitative Research</li>
+            <li>• Survey Methodology</li>
+            <li>• Policy Analysis</li>
+            <li>• Government Relations</li>
+            <li>• Project Management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
 
   <footer class="bg-gray-900 text-white px-6 py-12 mt-40">
@@ -63,6 +145,7 @@
       <div class="text-right justify-self-end">
         <h2 class="text-2xl font-semibold mb-4">Quick Links</h2>
         <ul class="space-y-2">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
           <li><a href="about.html" class="hover:underline">About</a></li>
           <li><a href="contact.html" class="hover:underline">Contact</a></li>
         </ul>
@@ -75,7 +158,6 @@
     </div>
   </footer>
 
-<link rel="stylesheet" href="./style.css" />
 <script src="./script.js" defer></script>
 
 </body>
