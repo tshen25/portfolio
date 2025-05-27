@@ -358,3 +358,14 @@ form .btn2{
     transform: none !important;
   }
 }
+
+
+.profile{
+  flex-basis: 35%;
+}
+.profile-img {
+  width: 300px;         /* You can adjust this value */
+  height: auto;         /* Maintains aspect ratio */
+  border-radius: 50%;   /* Makes it a circle if the image is square */
+  display: block;       /* Optional: allows margin auto to work */
+}
