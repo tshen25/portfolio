@@ -360,7 +360,9 @@ form .btn2{
   }
 }
 
-
+.about {
+  padding: 10px 60px;
+}
 .profile{
   flex-basis: 35%;
 }
@@ -369,4 +371,30 @@ form .btn2{
   height: auto;         /* Maintains aspect ratio */
   border-radius: 50%;   /* Makes it a circle if the image is square */
   display: block;       /* Optional: allows margin auto to work */
+}
+
+/* Button style for downloading resume*/
+.btn{
+  display: block;
+  margin: 30px auto;
+  width: fit-content;
+  border: 1px solid #ffcc00;
+  padding: 14px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn:hover{
+  background: #fff700;
+}
+.btn.btn2{
+  display: inline-block;
+  background-color: #ffcc00;
+}
+form .btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
 }
