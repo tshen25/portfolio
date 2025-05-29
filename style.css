@@ -13,7 +13,6 @@
   
   /* Hero section */
   .hero {
-    padding: 6rem 0;
     display: flex;
     flex-direction: column;
   }
@@ -56,19 +55,23 @@
   .nav {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fdf6e3; /* optional: for contrast */
   }
   
   .logo {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #000;
-    padding-left: clamp(1rem, 10vw, 20rem);
-    padding-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a202c; /* dark gray or black */
+    text-decoration: none;
   }
+  
   
   /* Gallery filters */
   .gallery-header {
     padding: 0 clamp(1rem, 10vw, 20rem);
+    margin-top: 50px;
     margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
@@ -361,7 +364,7 @@ form .btn2{
 }
 
 .about {
-  padding: 10px 60px;
+  padding: 10px 70px;
 }
 .profile{
   flex-basis: 35%;
